@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "抖音私信回复助手",
+  "version": "0.4.3",
+  "description": "结合当前私信上下文和自定义聊天风格，使用 AI 回复新消息。",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" }
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>抖音私信回复助手</title>
+<link rel="stylesheet" href="popup.css">
+<body>
+  <h1>MiMo AI 私信助手</h1>
+  <p class="hint">版本 0.4.3 · 保留可读原生表情，跳过无文字的图片表情包</p>
+  <p>读懂前后文，自然接话。先登录抖音网页版并打开一个聊天窗口。</p>
+  <label for="endpoint">AI 接口地址</label>
+  <input id="endpoint" type="url" placeholder="https://你的服务地址/v1/chat/completions">
+  <p class="hint">已预设小米 MiMo 官方接口，可按需修改。</p>
+  <label for="model">模型名称</label><input id="model" placeholder="填写服务商提供的模型 ID">
+  <label for="apiKey">API Key</label><input id="apiKey" type="password" autocomplete="off" placeholder="只在这里填写，不要发给聊天对象">
+  <label class="check"><input id="rememberKey" type="checkbox"> 在本机记住密钥</label>
+  <p class="hint">默认仅在本次浏览器会话保存密钥。勾选后会保存在本机扩展存储中，未加密。</p>
+  <label for="style">聊天风格</label><textarea id="style" rows="4" maxlength="4000"></textarea>
+  <label for="profile">你的资料与聊天背景（选填）</label>
+  <textarea id="profile" rows="3" maxlength="4000" placeholder="如：我喜欢摄影和徒步。与对方刚认识。不要主动聊工作。"></textarea>
+  <label for="interval">两次 AI 请求至少间隔（秒）</label>
+  <input id="interval" type="number" min="10" max="3600" value="15">
+  <button id="save">保存 AI 设置</button>
+  <button id="test" class="secondary">测试 AI 连接</button>
+  <p class="hint">学习风格会将最多 500 条己方不同文本（总计最多 6 万字）发送给 AI；试运行和自动回复会发送当前会话最近最多 24 条文本。可能产生调用费用。</p>
+  <button id="setup">① 点选网页元素</button>
+  <button id="distill" class="secondary">② 学习我的聊天风格</button>
+  <button id="preview">③ 试运行（填入输入框，不发送）</button>
+  <button id="start">④ 开启 AI 自动发送</button>
+  <button id="stop" class="secondary">停止</button>
+  <div id="status" role="status">正在读取状态…</div>
+  <p class="hint">仅处理启动后当前会话的新文本。切换会话、刷新页面后需要重新设置。按 Esc 随时停止。此版本尚需在你的账号上验证。</p>
+  <script src="engine.js"></script><script src="popup.js"></script>
+</body>
+</html>

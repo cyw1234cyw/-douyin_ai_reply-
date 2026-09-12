@@ -1,0 +1,13 @@
+body { width: 350px; margin: 0; padding: 20px; font: 15px/1.55 system-ui, sans-serif; color: #17212d; background: #f7f8fb; }
+h1 { font-size: 22px; margin: 0 0 8px; }
+p { margin: 8px 0 16px; }
+label { display: block; font-weight: 600; margin: 12px 0 6px; }
+textarea, input { box-sizing: border-box; width: 100%; border: 1px solid #bdc5d1; border-radius: 8px; padding: 10px; font: inherit; background: white; }
+textarea { resize: vertical; }
+button { width: 100%; padding: 10px; margin-top: 10px; border: 0; border-radius: 8px; background: #244ed8; color: white; font: inherit; cursor: pointer; }
+button:disabled { opacity: .5; cursor: wait; }
+.secondary { color: #17212d; background: #e2e6ed; }
+.hint { color: #536071; font-size: 13px; }
+#status { margin-top: 14px; padding: 10px; background: white; border-radius: 8px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.check { display: flex; align-items: center; gap: 8px; font-weight: 400; }
+.check input { width: auto; }
